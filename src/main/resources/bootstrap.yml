@@ -1,0 +1,10 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: affiliation
+  cloud:
+    config:
+      uri: http://localhost:8091
+      username: root
+      password: s3cr3t
