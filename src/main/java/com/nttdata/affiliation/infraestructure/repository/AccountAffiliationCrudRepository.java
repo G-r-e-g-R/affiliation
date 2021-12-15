@@ -148,7 +148,7 @@ public class AccountAffiliationCrudRepository
     public
     Flux<AccountAffiliation>
     findByIdCustomerByIdAccount(String idCustomer, String idAccount) {
-        return repository.findByIdCustomerByIdAccount(idCustomer, idAccount);
+        return repository.findByIdCustomerInAndIdAccount(idCustomer, idAccount);
     }
 
     /**

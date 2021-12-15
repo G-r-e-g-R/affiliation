@@ -194,7 +194,7 @@ public class CreditAffiliationCrudRepository
     public
     Flux<CreditAffiliation>
     findByIdCustomerByIdAccount(String idCustomer, String idCredit) {
-        return repository.findByIdCustomerByIdAccount(idCustomer, idCredit);
+        return repository.findByIdCustomerInAndIdCredit(idCustomer, idCredit);
     }
 
     /**

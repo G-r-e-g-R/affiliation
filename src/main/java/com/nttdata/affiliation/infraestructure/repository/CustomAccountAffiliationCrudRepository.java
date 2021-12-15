@@ -46,7 +46,7 @@ public class CustomAccountAffiliationCrudRepository
     @Override
     public
     Flux<AccountAffiliation>
-    findByIdCustomerByIdAccount(String idCustomer, String idAccount) {
+    findByIdCustomerInAndIdAccount(String idCustomer, String idAccount) {
         Query query = new Query(Criteria.where("idCustomer").is(idCustomer).and("idAccount").is(idAccount));
         return mongoTemplate.find(query, AccountAffiliation.class);
     }

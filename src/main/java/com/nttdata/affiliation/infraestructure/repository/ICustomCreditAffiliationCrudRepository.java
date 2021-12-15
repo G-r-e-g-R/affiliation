@@ -24,5 +24,5 @@ public interface ICustomCreditAffiliationCrudRepository {
      * @return Flux<CreditAffiliation>
      */
     Flux<CreditAffiliation>
-    findByIdCustomerByIdAccount(String idCustomer, String idCredit);
+    findByIdCustomerInAndIdCredit(String idCustomer, String idCredit);
 }

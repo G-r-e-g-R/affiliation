@@ -48,7 +48,7 @@ public class CustomCreditAffiliationCrudRepository
     @Override
     public
     Flux<CreditAffiliation>
-    findByIdCustomerByIdAccount(String idCustomer, String idCredit) {
+    findByIdCustomerInAndIdCredit(String idCustomer, String idCredit) {
         Query query = new Query(Criteria.where("idCustomer").is(idCustomer).and("idCredit").is(idCredit));
         return mongoTemplate.find(query, CreditAffiliation.class);
     }
